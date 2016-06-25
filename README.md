@@ -7,7 +7,7 @@ ___
 
 <br/>
 
-### 02 Bootstrap React Components
+### 01 Bootstrap React Components
 
 
 **002 Setup React Bootstrap**
@@ -32,3 +32,46 @@ ___
 <br/>
 
 **005 Working With State**
+
+
+<br/><br/>
+
+### 02 Github Profile Viewer
+
+
+**002 Files Webpack Setup**
+
+GithHub --> Settings --> OAuth applications --> Developer applications --> Register a new OAuth application
+
+
+Application name: myApp
+Homepage URL: http://localhost:8080
+Authorization callback URL: http://localhost:8080/_eauth/github
+
+
+    # npm install -g webpack --no-optional
+    # npm install -g webpack-dev-server --no-optional
+    # npm init
+    # npm install
+
+
+    # webpack-dev-server --port 8080 --hot --host 0.0.0.0
+
+<br/>
+
+    $ curl -I http://localhost:8080
+    HTTP/1.1 200 OK
+    X-Powered-By: Express
+    Content-Type: text/html; charset=utf-8
+    Content-Length: 7730
+    Date: Sat, 25 Jun 2016 13:12:31 GMT
+    Connection: keep-alive
+
+
+<br/>
+
+    $ links http://localhost:8080/app
+
+<br/>
+
+browser --> localhost:8080/app/
