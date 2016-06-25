@@ -1,5 +1,4 @@
-# ReactJS-and-Flux-Learn-By-Building-10-Projects
-[Eduonix] ReactJS and Flux: Learn By Building 10 Projects
+### [Eduonix] ReactJS and Flux: Learn By Building 10 Projects [ENG, 2016]
 
 https://www.youtube.com/watch?v=S8ArGSiYYBw
 
@@ -54,6 +53,7 @@ Authorization callback URL: http://localhost:8080/_eauth/github
     # npm init
     # npm install
 
+<br/>
 
     # webpack-dev-server --port 8080 --hot --host 0.0.0.0
 
@@ -75,3 +75,12 @@ Authorization callback URL: http://localhost:8080/_eauth/github
 <br/>
 
 browser --> localhost:8080/app/
+
+
+
+<br/>
+
+**003 Main App Component**
+
+
+http://getbootstrap.com/examples/starter-template/
