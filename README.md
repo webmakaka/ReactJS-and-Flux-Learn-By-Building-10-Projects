@@ -128,7 +128,7 @@ Update next valuers to run app:
 ### 03 Quick Quiz Application
 
 
-Technologies: webpack
+Technologies: bootstrap, webpack
 
 <br/>
 
@@ -144,3 +144,8 @@ Technologies: webpack
 <br/>
 
 browser --> localhost:8080/app/
+
+
+<br/>
+
+003 QuestionList Question Component
