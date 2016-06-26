@@ -37,6 +37,8 @@ ___
 
 ### 02 Github Profile Viewer
 
+jquery, bootstrap, webpack
+
 
 **002 Files Webpack Setup**
 
@@ -82,5 +84,10 @@ browser --> localhost:8080/app/
 
 **003 Main App Component**
 
-
 http://getbootstrap.com/examples/starter-template/
+
+
+
+<br/>
+
+**004 Profile Component**
