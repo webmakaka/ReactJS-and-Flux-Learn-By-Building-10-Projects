@@ -37,7 +37,7 @@ ___
 
 ### 02 Github Profile Viewer
 
-jquery, bootstrap, webpack
+Technologies: jquery, bootstrap, webpack
 
 
 **002 Files Webpack Setup**
@@ -54,6 +54,9 @@ GithHub --> Settings --> OAuth applications --> Developer applications --> Regis
 
     # npm install -g webpack --no-optional
     # npm install -g webpack-dev-server --no-optional
+
+<br/>
+
     # npm init
     # npm install
 
@@ -117,3 +120,27 @@ Update next valuers to run app:
 
     clientId: 'myClientId',
     clientSecret: 'myClientSecret'
+
+
+
+<br/>
+
+### 03 Quick Quiz Application
+
+
+Technologies: webpack
+
+<br/>
+
+002 App Component Setup
+
+
+    $ npm init
+    $ npm install
+
+    $ webpack-dev-server --port 8080 --hot --host 0.0.0.0
+
+
+<br/>
+
+browser --> localhost:8080/app/
