@@ -44,11 +44,13 @@ jquery, bootstrap, webpack
 
 GithHub --> Settings --> OAuth applications --> Developer applications --> Register a new OAuth application
 
+<br/>
 
-Application name: myApp
-Homepage URL: http://localhost:8080
-Authorization callback URL: http://localhost:8080/_eauth/github
+    Application name: myApp
+    Homepage URL: http://localhost:8080
+    Authorization callback URL: http://localhost:8080/_eauth/github
 
+<br/>
 
     # npm install -g webpack --no-optional
     # npm install -g webpack-dev-server --no-optional
@@ -96,3 +98,22 @@ http://getbootstrap.com/examples/starter-template/
 <br/>
 
 **005 RepoList Repo Components**
+
+
+<br/>
+
+**006 Search Component**
+
+<br/>
+
+![project_2_pic_1](img/project_2_pic_1.png)
+
+
+![project_2_pic_2](img/project_2_pic_2.png)
+
+<br/>
+
+Update next valuers to run app:
+
+    clientId: 'myClientId',
+    clientSecret: 'myClientSecret'
