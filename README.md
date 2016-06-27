@@ -112,6 +112,8 @@ http://getbootstrap.com/examples/starter-template/
 ![project_2_pic_1](img/project_2_pic_1.png)
 
 
+<br/>
+
 ![project_2_pic_2](img/project_2_pic_2.png)
 
 <br/>
@@ -149,3 +151,22 @@ browser --> localhost:8080/app/
 <br/>
 
 003 QuestionList Question Component
+
+
+<br/>
+
+004 Quiz Logic
+
+
+<br/>
+
+![project_3_pic_1](img/project_3_pic_1.png)
+
+
+<br/>
+
+![project_3_pic_2](img/project_3_pic_2.png)
+
+<br/>
+
+![project_3_pic_3](img/project_3_pic_3.png)
