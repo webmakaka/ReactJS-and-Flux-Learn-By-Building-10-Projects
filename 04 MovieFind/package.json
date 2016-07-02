@@ -1,0 +1,23 @@
+{
+  "name": "04_moviefind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependensies":{
+      "browserify": "*",
+      "flux": "*",
+      "gulp": "*",
+      "reactify": "*",
+      "vilyl-source-stream": "*",
+      "object-assign": "*"
+  },
+  "dependencies":{
+      "react": "^0.14.7",
+      "react-dom": "^0.14.7"
+  }
+}

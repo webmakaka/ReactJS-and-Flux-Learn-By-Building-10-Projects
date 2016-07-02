@@ -18,22 +18,19 @@ ___
     http://getbootstrap.com/components/#navbar
 
 
-<br/>
 
 **003 Creating React Components**
 
 
-<br/>
 
 **004 Component Props**
 
 
-<br/>
 
 **005 Working With State**
 
 
-<br/><br/>
+<br/>
 
 ### 02 Github Profile Viewer
 
@@ -44,7 +41,6 @@ Technologies: jquery, bootstrap, webpack
 
 GithHub --> Settings --> OAuth applications --> Developer applications --> Register a new OAuth application
 
-<br/>
 
     Application name: myApp
     Homepage URL: http://localhost:8080
@@ -73,7 +69,6 @@ GithHub --> Settings --> OAuth applications --> Developer applications --> Regis
     Content-Length: 7730
     Date: Sat, 25 Jun 2016 13:12:31 GMT
     Connection: keep-alive
-
 
 <br/>
 
@@ -143,7 +138,6 @@ Technologies: bootstrap, webpack
     $ webpack-dev-server --port 8080 --hot --host 0.0.0.0
 
 
-<br/>
 
 browser --> localhost:8080/app/
 
@@ -170,3 +164,47 @@ browser --> localhost:8080/app/
 <br/>
 
 ![project_3_pic_3](img/project_3_pic_3.png)
+
+
+
+<br/>
+
+### 04 MovieFind
+
+Technologies: bootstrap, jquery, gulp, flux
+
+<br/>
+
+
+002 Flux Structure Gulp Part
+
+http://facebook.github.io/flux/docs/overview.html
+
+http://omdbapi.com/
+
+    $ npm init
+    $ npm install
+
+<br/>
+
+    $ gulp
+
+<br/>
+
+    $ npm list -g --depth=0
+    /usr/local/lib
+    ├── gulp@3.9.1
+    ├── npm@3.9.5
+    ├── webpack@1.13.1
+    └── webpack-dev-server@1.14.1
+
+<br/>
+
+    $ npm list --depth=0
+    04_moviefind@1.0.0 /projects/04 MovieFind
+    ├── browserify@13.0.1 extraneous
+    ├── gulp@3.9.1 extraneous
+    ├── react@0.14.8
+    ├── react-dom@0.14.8
+    ├── reactify@1.1.1 extraneous
+    └── vinyl-source-stream@1.1.0 extraneous
