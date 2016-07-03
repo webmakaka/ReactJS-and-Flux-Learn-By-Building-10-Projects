@@ -8,12 +8,12 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependensies":{
+  "devDependencies":{
       "browserify": "*",
       "flux": "*",
       "gulp": "*",
       "reactify": "*",
-      "vilyl-source-stream": "*",
+      "vinyl-source-stream": "*",
       "object-assign": "*"
   },
   "dependencies":{
