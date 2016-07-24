@@ -26,7 +26,7 @@ var SearchForm = React.createClass ({
             title: this.refs.title.value.trim()
         }
 
-        AppActions.searchMoviews(movie);
+        AppActions.searchMovies(movie);
     }
 });
 
