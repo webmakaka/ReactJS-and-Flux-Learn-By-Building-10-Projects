@@ -25,7 +25,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 AppDispatcher.register(function(payload){
     var action = payload.action;
 
-    switch(caction.actionType){
+    switch(action.actionType){
 
     }
 
