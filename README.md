@@ -189,22 +189,7 @@ http://omdbapi.com/
 
     $ gulp
 
-<br/>
-
-    $ npm list -g --depth=0
-    /usr/local/lib
-    ├── gulp@3.9.1
-    ├── npm@3.9.5
-    ├── webpack@1.13.1
-    └── webpack-dev-server@1.14.1
 
 <br/>
 
-    $ npm list --depth=0
-    04_moviefind@1.0.0 /projects/04 MovieFind
-    ├── browserify@13.0.1 extraneous
-    ├── gulp@3.9.1 extraneous
-    ├── react@0.14.8
-    ├── react-dom@0.14.8
-    ├── reactify@1.1.1 extraneous
-    └── vinyl-source-stream@1.1.0 extraneous
+004 Flux Setup Preperation
