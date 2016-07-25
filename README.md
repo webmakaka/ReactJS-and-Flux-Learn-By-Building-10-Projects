@@ -203,3 +203,19 @@ http://omdbapi.com/
 <br/>
 
 007 Working With The API
+
+
+
+<br/>
+
+008 Displaying Results
+
+
+<br/>
+
+![project_4_pic_1](img/project_4_pic_1.png)
+
+
+<br/>
+
+![project_4_pic_2](img/project_4_pic_2.png)
