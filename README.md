@@ -205,7 +205,6 @@ http://omdbapi.com/
 007 Working With The API
 
 
-
 <br/>
 
 008 Displaying Results
@@ -251,12 +250,11 @@ Technologies: Firebase
 firebase.com
 
 
-
 <br/>
 
 002 Flux Boilerplate Setup
 
-New Project:
+Create New App:
 
 App Name: ContactList  
 App URL: contactlist9  
@@ -264,3 +262,8 @@ App URL: contactlist9
 
     $ npm install
     $ gulp
+
+
+<br/>
+
+003 Adding Contacts To Store
