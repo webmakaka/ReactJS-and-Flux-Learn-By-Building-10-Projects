@@ -219,3 +219,48 @@ http://omdbapi.com/
 <br/>
 
 ![project_4_pic_2](img/project_4_pic_2.png)
+
+
+    $ npm list -g --depth=0
+    /usr/local/lib
+    ├── gulp@3.9.1
+    ├── npm@3.9.5
+    ├── webpack@1.13.1
+    └── webpack-dev-server@1.14.1
+
+<br/>
+
+    $ npm list --depth=0
+    04_moviefind@1.0.0 /projects/04 MovieFind
+    ├── browserify@13.0.1
+    ├── flux@2.1.1
+    ├── gulp@3.9.1
+    ├── object-assign@2.1.1
+    ├── react@0.14.8
+    ├── react-dom@0.14.8
+    ├── reactify@1.1.1
+    └── vinyl-source-stream@1.1.0
+
+
+<br/>
+
+### 05 Firebase ContactList
+
+Technologies: Firebase
+
+firebase.com
+
+
+
+<br/>
+
+002 Flux Boilerplate Setup
+
+New Project:
+
+App Name: ContactList  
+App URL: contactlist9  
+
+
+    $ npm install
+    $ gulp
