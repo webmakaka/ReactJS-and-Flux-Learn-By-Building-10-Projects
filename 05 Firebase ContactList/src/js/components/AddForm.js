@@ -37,8 +37,6 @@ var AddForm = React.createClass ({
         }
 
         AppActions.saveContact(contact);
-
-
     }
 
 });

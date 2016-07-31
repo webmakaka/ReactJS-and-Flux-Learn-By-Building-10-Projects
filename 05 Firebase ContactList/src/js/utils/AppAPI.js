@@ -25,5 +25,16 @@ module.exports = {
 
             });
         });
+    },
+
+
+    removeContact: function(contactId){
+
+        console.log("HELLO1");
+
+        this.firebaseRef = new Firebase('https://contactlist9.firebaseio.com/contacts/'+contactId);
+        this.firebaseRef.remove();
+
     }
+
 };

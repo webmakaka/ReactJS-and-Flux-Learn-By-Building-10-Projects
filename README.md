@@ -274,3 +274,8 @@ App URL: contactlist9
 004 Persisting Data To Firebase
 
     $ npm install --save firebase@2.*.*
+
+
+<br/>
+
+005 Listing Deleting Contacts
