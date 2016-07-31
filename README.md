@@ -1,4 +1,4 @@
-### [Eduonix] ReactJS and Flux: Learn By Building 10 Projects [ENG, 2016]
+ta### [Eduonix] ReactJS and Flux: Learn By Building 10 Projects [ENG, 2016]
 
 https://www.youtube.com/watch?v=S8ArGSiYYBw
 
@@ -267,3 +267,10 @@ App URL: contactlist9
 <br/>
 
 003 Adding Contacts To Store
+
+
+<br/>
+
+004 Persisting Data To Firebase
+
+    $ npm install --save firebase@2.*.*
