@@ -279,3 +279,33 @@ App URL: contactlist9
 <br/>
 
 005 Listing Deleting Contacts
+
+
+<br/>
+
+007 Edit  Update Contacts
+
+
+
+<br/>
+
+![project_5_pic_1](img/project_5_pic_1.png)
+
+
+<br/>
+
+![project_5_pic_2](img/project_5_pic_2.png)
+
+<br/>
+
+    # npm list --depth=0
+    05_Firebase_ContactList@1.0.0 /projects/05 Firebase ContactList
+    ├── browserify@13.1.0
+    ├── firebase@2.4.2
+    ├── flux@2.1.1
+    ├── gulp@3.9.1
+    ├── object-assign@2.1.1
+    ├── react@0.14.8
+    ├── react-dom@0.14.8
+    ├── reactify@1.1.1
+    └── vinyl-source-stream@1.1.0

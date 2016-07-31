@@ -13,7 +13,7 @@ var Contact = React.createClass ({
                 <td>{this.props.contact.phone}</td>
                 <td>{this.props.contact.email}</td>
                 <td>
-                    <a href="#" className="btn btn-default" onClick={this.handleEdit}>Edit</a>
+                    <a href="#" className="btn btn-default" onClick={this.handleEdit.bind(this, this.props.contact)}>Edit</a>
                     <a href="#" className="btn btn-danger" onClick={this.handleRemove.bind(this, this.props.contact.id)}>Delete</a>
                 </td>
             </tr>
@@ -22,8 +22,12 @@ var Contact = React.createClass ({
 
     handleRemove: function(i, j){
         console.log("Contact --> handleRemove");
-
         AppActions.removeContact(i);
+    },
+
+    handleEdit: function(i, j){
+        console.log("Contact --> handleEdit");
+        AppActions.editContact(i);
     }
 
 });

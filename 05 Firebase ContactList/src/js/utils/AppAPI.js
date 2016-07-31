@@ -29,12 +29,20 @@ module.exports = {
 
 
     removeContact: function(contactId){
-
-        console.log("HELLO1");
-
         this.firebaseRef = new Firebase('https://contactlist9.firebaseio.com/contacts/'+contactId);
         this.firebaseRef.remove();
+    },
 
+    updateContact: function(contact){
+        var id = contact.id;
+        var updatedContact = {
+            name: contact.name,
+            phone: contact.phone,
+            email: contact.email
+        };
+
+        this.firebaseRef = new Firebase('https://contactlist9.firebaseio.com/contacts/'+contact.Id+'/contact');
+        this.firebaseRef.update(updatedContact);
     }
 
 };
