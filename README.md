@@ -283,7 +283,7 @@ App URL: contactlist9
 
 <br/>
 
-007 Edit  Update Contacts
+007 Edit Update Contacts
 
 
 
@@ -309,3 +309,30 @@ App URL: contactlist9
     ├── react-dom@0.14.8
     ├── reactify@1.1.1
     └── vinyl-source-stream@1.1.0
+
+
+<br/>
+
+### 06 Stickypad Notes
+
+Technologies: Flux, Mongolab
+
+
+<br/>
+
+002 Stickypad Boilerplate Setup
+
+mongolab.com
+
+    Create New ->
+    Cloud Provider --> Amazon
+    Plan -->Single-node --> Sandbox
+
+    Database name: stickypad1
+
+    Add Database User: marley
+
+<br/>
+
+    $ npm install
+    $ gulp
