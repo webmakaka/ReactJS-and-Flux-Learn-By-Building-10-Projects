@@ -6,10 +6,16 @@ var AppAPI = require('../utils/AppAPI.js');
 
 var CHANGE_EVENT = 'change';
 
-var _items = [];
+var _notes = [];
 
 var AppStore = assign({}, EventEmitter.prototype, {
 
+    addNote: function(note){
+        _notes.push(note);
+    },
+    getNotes: function(){
+        return _notes;
+    },
     emitChange: function(){
         this.emit(CHANGE_EVENT);
     },
@@ -26,7 +32,18 @@ AppDispatcher.register(function(payload){
     var action = payload.action;
 
     switch(action.actionType){
-        
+
+        case AppConstants.ADD_NOTE: console.log('Adding Note ...');
+
+        // Store save
+
+        AppStore.addNote(action.note);
+
+        // API Save
+
+        // Emit change
+        AppStore.emit(CHANGE_EVENT);
+
     }
 
     return true;
