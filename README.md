@@ -408,3 +408,24 @@ no run
 <br/>
 
 004 Fetch Data From DuckDuckGo API
+
+
+<br/>
+
+005 Display Results
+
+
+![project_7_pic_1.png](img/project_7_pic_1.png)
+
+![project_7_pic_1.png](img/project_7_pic_2.png)
+
+    # npm list --depth=0
+    07_InfoFinder_Search_Engine@1.0.0 /projects/07 InfoFinder Search Engine
+    ├── browserify@13.1.0
+    ├── flux@2.1.1
+    ├── gulp@3.9.1
+    ├── object-assign@2.1.1
+    ├── react@0.14.8
+    ├── react-dom@0.14.8
+    ├── reactify@1.1.1
+    └── vinyl-source-stream@1.1.0
