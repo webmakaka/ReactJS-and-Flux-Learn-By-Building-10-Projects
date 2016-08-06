@@ -402,3 +402,9 @@ https://duckduckgo.com/api
 <br/>
 
 003 Search Form
+
+no run
+
+<br/>
+
+004 Fetch Data From DuckDuckGo API
