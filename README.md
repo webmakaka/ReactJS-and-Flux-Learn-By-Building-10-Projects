@@ -349,5 +349,9 @@ mongolab.com
 
 mongolab.com --> UserProfile --> Api Key
 
-
 AppAPI.js add your API KEY.
+
+
+<br/>
+
+005 Display Sticky Notes

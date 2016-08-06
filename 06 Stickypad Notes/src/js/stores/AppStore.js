@@ -49,6 +49,7 @@ AppDispatcher.register(function(payload){
 
             // Emit change
             AppStore.emit(CHANGE_EVENT);
+            break;
 
         case AppConstants.RECEIVE_NOTES:
 
@@ -58,11 +59,9 @@ AppDispatcher.register(function(payload){
 
             AppStore.setNotes(action.notes);
 
-            // API Save
-            AppAPI.addNote(action.note);
-
             // Emit change
             AppStore.emit(CHANGE_EVENT);
+            break;
 
     }
 

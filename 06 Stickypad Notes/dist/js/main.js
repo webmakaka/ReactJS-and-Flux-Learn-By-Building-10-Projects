@@ -19834,8 +19834,9 @@ var Note = React.createClass ({displayName: "Note",
 
     render: function(){
         return(
-            React.createElement("div", null, 
-                "A NOTE"
+            React.createElement("div", {className: "column"}, 
+                React.createElement("div", {className: "note"}, React.createElement("p", null, this.props.note.text))
+
             )
         )
     },
@@ -19960,6 +19961,7 @@ AppDispatcher.register(function(payload){
 
             // Emit change
             AppStore.emit(CHANGE_EVENT);
+            break;
 
         case AppConstants.RECEIVE_NOTES:
 
@@ -19969,11 +19971,9 @@ AppDispatcher.register(function(payload){
 
             AppStore.setNotes(action.notes);
 
-            // API Save
-            AppAPI.addNote(action.note);
-
             // Emit change
             AppStore.emit(CHANGE_EVENT);
+            break;
 
     }
 
