@@ -355,3 +355,14 @@ AppAPI.js add your API KEY.
 <br/>
 
 005 Display Sticky Notes
+
+<br/>
+
+006 Delete Sticky Notes
+
+
+<br/>
+
+![project_6_pic_1](img/project_6_pic_1.png)
+
+Remove Note by DoubleClick
