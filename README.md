@@ -366,3 +366,36 @@ AppAPI.js add your API KEY.
 ![project_6_pic_1](img/project_6_pic_1.png)
 
 Remove Note by DoubleClick
+
+
+    # npm list --depth=0
+    06_Stickypad_Notes@1.0.0 /projects/06 Stickypad Notes
+    ├── browserify@13.1.0
+    ├── flux@2.1.1
+    ├── gulp@3.9.1
+    ├── object-assign@2.1.1
+    ├── react@0.14.8
+    ├── react-dom@0.14.8
+    ├── reactify@1.1.1
+    └── vinyl-source-stream@1.1.0
+
+
+
+<br/>
+
+### 07 InfoFinder Search Engine
+
+Technologies: DuckDuckGO API
+
+<br/>
+
+002 InfoFinder Fluxboiler Setup
+
+https://duckduckgo.com/api
+
+
+    $ npm install
+    $ gulp
+
+
+    
