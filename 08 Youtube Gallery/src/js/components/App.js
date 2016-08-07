@@ -5,7 +5,7 @@ var AddForm = require('./AddForm.js');
 
 function getAppState(){
     return {
-
+        videos: AppStore.getVideos()
     };
 }
 
@@ -26,6 +26,8 @@ var App = React.createClass ({
     },
 
     render: function(){
+
+        console.log(this.state.videos)
 
         return(
             <div>

@@ -443,3 +443,25 @@ http://firezenk.github.io/zimit/
 <br/>
 
 002 Boiler Add Video Form
+
+<br/>
+
+003 Persist Data To Firebase
+
+    $ npm install --save firebase@2.*.*
+
+
+Create new database:
+
+    App Name: ytgallery1
+    App Url: ytgallery1
+
+<br/>
+
+    gulp
+
+<br/>
+
+    Video Title: Enjoykin
+    Video ID: id: n-AdoTkXwbc
+    Video Description: Some Description
