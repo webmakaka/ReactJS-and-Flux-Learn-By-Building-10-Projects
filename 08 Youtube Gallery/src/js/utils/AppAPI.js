@@ -35,5 +35,10 @@ module.exports = {
 
             console.log(snapshot);
         });
+    },
+
+    removeVideo: function(videoId){
+        this.firebaseRef = new Firebase("https://ytgallery1.firebaseio.com/videos/" + videoId);
+        this.firebaseRef.remove();
     }
 };

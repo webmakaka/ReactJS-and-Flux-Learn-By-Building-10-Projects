@@ -20008,7 +20008,16 @@ var AppActions = {
             actionType: AppConstants.RECEIVE_VIDEOS,
             videos: videos
         });
+    },
+
+    removeVideo: function(videoId){
+
+        AppDispatcher.handleViewAction({
+            actionType: AppConstants.REMOVE_VIDEO,
+            videoId: videoId
+        });
     }
+
 
 };
 
@@ -20134,11 +20143,15 @@ var Video = React.createClass ({displayName: "Video",
 
         return(
             React.createElement("div", {className: "c4"}, 
-                React.createElement("h5", null, this.props.video.title), 
+                React.createElement("h5", null, this.props.video.title, " ", React.createElement("span", {clssName: "delete"}, React.createElement("a", {onClick: this.onDelete.bind(this, this.props.video.id), href: "#"}, "X"))), 
                 React.createElement("iframe", {width: "360", height: "285", src: link, frameborder: "0", allowfullscreen: true}), 
                 React.createElement("p", null, this.props.video.description)
             )
         );
+    },
+
+    onDelete: function(i, j){
+        AppActions.removeVideo(i);
     }
 
 });
@@ -20177,7 +20190,8 @@ module.exports = VideoList;
 },{"../actions/AppActions":165,"../stores/AppStore":173,"./Video.js":168,"react":164}],170:[function(require,module,exports){
 module.exports = {
     SAVE_VIDEO: 'SAVE_VIDEO',
-    RECEIVE_VIDEOS: 'RECEIVE_VIDEOS'
+    RECEIVE_VIDEOS: 'RECEIVE_VIDEOS',
+    REMOVE_VIDEO: 'REMOVE_VIDEO'
 };
 
 },{}],171:[function(require,module,exports){
@@ -20233,6 +20247,10 @@ var AppStore = assign({}, EventEmitter.prototype, {
     setVideos: function(videos){
         _videos = videos;
     },
+    removeVideo: function(videoId){
+        var index = _videos.findIndex(x => x.id === videoId);
+        _videos.splice(index,1);
+    },
     emitChange: function(){
         this.emit(CHANGE_EVENT);
     },
@@ -20272,6 +20290,21 @@ AppDispatcher.register(function(payload){
 
             // Set Receive
             AppStore.setVideos(action.videos);
+
+            // Emit change
+            AppStore.emit(CHANGE_EVENT);
+
+        break;
+
+        case AppConstants.REMOVE_VIDEO:
+
+            console.log("Removing Video ...");
+
+            // Store Remove
+            AppStore.removeVideo(action.videoId);
+
+            // API Remove
+            AppAPI.removeVideo(action.videoId);
 
 
             // Emit change
@@ -20325,6 +20358,11 @@ module.exports = {
 
             console.log(snapshot);
         });
+    },
+
+    removeVideo: function(videoId){
+        this.firebaseRef = new Firebase("https://ytgallery1.firebaseio.com/videos/" + videoId);
+        this.firebaseRef.remove();
     }
 };
 

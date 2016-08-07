@@ -470,3 +470,24 @@ Create new database:
 <br/>
 
 004 Displaying Videos
+
+
+<br/>
+
+005 Deleting Videos
+
+
+![project_8_pic_1.png](img/project_8_pic_1.png)
+
+
+    # npm list --depth=0
+    08_Youtube_Gallery@1.0.0 /projects/08 Youtube Gallery
+    ├── browserify@13.1.0
+    ├── firebase@2.4.2
+    ├── flux@2.1.1
+    ├── gulp@3.9.1
+    ├── object-assign@2.1.1
+    ├── react@0.14.8
+    ├── react-dom@0.14.8
+    ├── reactify@1.1.1
+    └── vinyl-source-stream@1.1.0
