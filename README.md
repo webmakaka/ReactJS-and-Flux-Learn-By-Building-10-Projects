@@ -491,3 +491,26 @@ Create new database:
     ├── react-dom@0.14.8
     ├── reactify@1.1.1
     └── vinyl-source-stream@1.1.0
+
+
+
+<br/>
+
+### 09 Socket.io Chat App
+
+Technologies: Webpack, Express, Socket.io
+
+
+<br/>
+
+002 Webpack React Setup
+
+    $ npm init
+    $ npm install
+
+    # npm install -g webpack
+    # npm install -g webpack-dev-server
+
+    $ webpack-dev-server --port 8080 --hot --host 0.0.0.0
+
+http://localhost:8080/app/
