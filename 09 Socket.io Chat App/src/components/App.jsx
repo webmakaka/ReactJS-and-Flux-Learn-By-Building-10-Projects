@@ -1,5 +1,13 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import io from 'socket.io-client';
+
+import MessageList from './Messages/MessageList.jsx';
+import MessageForm from './Messages/MessageForm.jsx';
+
+import UserList from './Users/UserList.jsx';
+import UserForm from './Users/UserForm.jsx';
+
 
 class App extends Component{
     constructor(props){
@@ -9,10 +17,30 @@ class App extends Component{
         };
     }
 
+    componentWillMount(){
+        this.socket = io('http://localhost:3000');
+        this.socket.on('connect', this.connect.bind(this));
+    }
+
+    connect(){
+        this.setState({
+            status: 'connected'
+        });
+
+        console.log('Connected: ' + this.socket.id);
+    }
+
+
     render(){
         return (
-            <div>
-                 This is my app
+            <div className="row">
+                <div className="col-md-4">
+                    <UserList />
+                </div>
+                <div className="col-md-8">
+                    <MessageList />
+                    <MessageForm />
+                </div>
             </div>
         )
     }

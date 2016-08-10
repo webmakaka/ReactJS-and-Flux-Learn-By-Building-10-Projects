@@ -514,3 +514,14 @@ Technologies: Webpack, Express, Socket.io
     $ webpack-dev-server --port 8080 --hot --host 0.0.0.0
 
 http://localhost:8080/app/
+
+
+<br/>
+
+003 Server Connection Setup
+
+    $ webpack-dev-server --port 8080 --hot --host 0.0.0.0
+    $ node server
+
+http://localhost:3000  
+http://localhost:8080/app/   
