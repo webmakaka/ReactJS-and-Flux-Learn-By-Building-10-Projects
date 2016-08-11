@@ -495,7 +495,7 @@ Create new database:
 
 
 <br/>
-
+cke
 ### 09 Socket.io Chat App
 
 Technologies: Webpack, Express, Socket.io
@@ -525,3 +525,8 @@ http://localhost:8080/app/
 
 http://localhost:3000  
 http://localhost:8080/app/   
+
+
+<br/>
+
+004 Adding Messages
