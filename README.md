@@ -1,4 +1,4 @@
-### [Eduonix] ReactJS and Flux: Learn By Building 10 Projects [ENG, 2016]
+re### [Eduonix] ReactJS and Flux: Learn By Building 10 Projects [ENG, 2016]
 
 https://www.youtube.com/watch?v=S8ArGSiYYBw
 
@@ -530,3 +530,8 @@ http://localhost:8080/app/
 <br/>
 
 004 Adding Messages
+
+
+<br/>
+
+005 Display Messages

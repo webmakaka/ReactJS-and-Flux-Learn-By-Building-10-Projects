@@ -24,7 +24,7 @@ io.sockets.on('connection', function(socket){
         // console.log(payload);
 
         var newMessage = {
-            temeStamp: payload.timeStamp,
+            timeStamp: payload.timeStamp,
             text: payload.text
         };
 
