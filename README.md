@@ -495,7 +495,7 @@ Create new database:
 
 
 <br/>
-cke
+
 ### 09 Socket.io Chat App
 
 Technologies: Webpack, Express, Socket.io
@@ -535,3 +535,27 @@ http://localhost:8080/app/
 <br/>
 
 005 Display Messages
+
+
+<br/>
+
+006 Username Functionality
+
+
+![project_9_pic_1.png](img/project_9_pic_1.png)
+
+![project_9_pic_2.png](img/project_9_pic_2.png)
+
+![project_9_pic_3.png](img/project_9_pic_3.png)
+
+
+    $ npm list --depth=0
+    09_socket.io_chat_app@1.0.0 /projects/09 Socket.io Chat App
+    ├── babel-core@5.8.38
+    ├── babel-loader@5.3.3
+    ├── express@4.14.0
+    ├── react@0.14.8
+    ├── react-dom@0.14.8
+    ├── socket.io@1.4.8
+    ├── socket.io-client@1.4.8
+    └── webpack@1.12.15

@@ -11,7 +11,7 @@ class Message extends Component{
 
         return (
             <div className="message">
-                <strong></strong> {formattedTime} - {message.text}
+                <strong>{message.user}</strong> {formattedTime} - {message.text}
             </div>
         )
     }
