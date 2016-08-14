@@ -4,8 +4,12 @@ var AppStore = require('../stores/AppStore');
 var AddForm = require('./AddForm.js');
 
 function getAppState(){
+
+    console.log('App.getAppState()');
+
     return {
-        showForm: AppStore.getShowForm
+        showForm: AppStore.getShowForm(),
+        workouts: AppStore.getWorkouts()
     };
 }
 
@@ -25,11 +29,16 @@ var App = React.createClass ({
     },
 
     onShowFormClick: function(e){
+
+        console.log('App.onShowFormClick()');
+
         e.preventDefault();
         AppActions.showForm();
     },
 
     render: function(){
+
+        // console.log(this.state.workouts);
 
         if(this.state.showForm){
             var form = <AddForm />

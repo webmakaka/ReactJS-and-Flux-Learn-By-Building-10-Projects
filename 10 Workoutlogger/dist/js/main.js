@@ -19742,6 +19742,13 @@ var AppActions = {
         AppDispatcher.handleViewAction({
             actionType: AppConstants.SHOW_FORM
         });
+    },
+
+    addWorkout: function(workout){
+        AppDispatcher.handleViewAction({
+            actionType: AppConstants.ADD_WORKOUT,
+            workout: workout
+        });
     }
 };
 
@@ -19759,11 +19766,57 @@ var AddForm = React.createClass ({displayName: "AddForm",
     render: function(){
 
         return(
-            React.createElement("div", null, 
-                "FORM"
+            React.createElement("form", {onSubmit: this.onSubmit}, 
+                React.createElement("div", {className: "form-group"}, 
+                    React.createElement("select", {className: "form-control", ref: "type"}, 
+                        React.createElement("option", {value: "Jogging"}, "Jogging"), 
+                        React.createElement("option", {value: "Weight Lifting"}, "Weight Lifting"), 
+                        React.createElement("option", {value: "Eliptical"}, "Eliptical"), 
+                        React.createElement("option", {value: "Yoga"}, "Yoga"), 
+                        React.createElement("option", {value: "other"}, "Other")
+                    )
+                ), 
+                React.createElement("div", {className: "form-group"}, 
+                    React.createElement("input", {type: "text", className: "form-control", ref: "minutes", placeholder: "Minutes"})
+                ), 
+                React.createElement("div", {className: "form-group"}, 
+                    React.createElement("input", {type: "text", className: "form-control", ref: "miles", placeholder: "Miles (Optional)"})
+                ), 
+                React.createElement("button", {type: "submit", className: "btn btn-default btn-block"}, "Log Workout")
             )
-        )
+        );
     },
+
+    onSubmit: function(e){
+
+        console.log('test');
+
+        e.preventDefault();
+
+        var workout = {
+            id: this.generateId(),
+            type: this.refs.type.value.trim(),
+            minutes: this.refs.minutes.value.trim(),
+            miles: this.refs.miles.value.trim(),
+            date: new Date()
+        }
+
+        console.log(workout);
+
+        AppActions.addWorkout(workout);
+
+    },
+
+    generateId: function(){
+        var id = '';
+        var possible = '0123456789';
+
+        for (var i = 0; i < 5; i++){
+            id += possible.charAt(Math.floor(Math.random() * possible.lenght));
+        }
+
+        return id;
+    }
 
 });
 
@@ -19776,8 +19829,12 @@ var AppStore = require('../stores/AppStore');
 var AddForm = require('./AddForm.js');
 
 function getAppState(){
+
+    console.log('App.getAppState()');
+
     return {
-        showForm: AppStore.getShowForm
+        showForm: AppStore.getShowForm(),
+        workouts: AppStore.getWorkouts()
     };
 }
 
@@ -19797,11 +19854,16 @@ var App = React.createClass ({displayName: "App",
     },
 
     onShowFormClick: function(e){
+
+        console.log('App.onShowFormClick()');
+
         e.preventDefault();
         AppActions.showForm();
     },
 
     render: function(){
+
+        // console.log(this.state.workouts);
 
         if(this.state.showForm){
             var form = React.createElement(AddForm, null)
@@ -19831,7 +19893,8 @@ module.exports = App;
 
 },{"../actions/AppActions":164,"../stores/AppStore":170,"./AddForm.js":165,"react":163}],167:[function(require,module,exports){
 module.exports = {
-    SHOW_FORM: 'SHOW_FORM'
+    SHOW_FORM: 'SHOW_FORM',
+    ADD_WORKOUT: 'ADD_WORKOUT'
 };
 
 },{}],168:[function(require,module,exports){
@@ -19871,7 +19934,7 @@ var AppAPI = require('../utils/AppAPI.js');
 
 var CHANGE_EVENT = 'change';
 
-var _items = [];
+var _workouts = [];
 var _showForm = false;
 
 var AppStore = assign({}, EventEmitter.prototype, {
@@ -19884,8 +19947,22 @@ var AppStore = assign({}, EventEmitter.prototype, {
         _showForm = true;
     },
 
+    getWorkouts: function(){
+
+        console.log('AppStore.getWorkouts()');
+
+        return _workouts;
+    },
+
     getShowForm: function(){
+
+        console.log('AppStore.getShowForm()');
+
         return _showForm;
+    },
+
+    addWorkout: function(workout){
+        _workouts.push(workout);
     },
 
     addChangeListener: function(callback){
@@ -19904,7 +19981,13 @@ AppDispatcher.register(function(payload){
         case AppConstants.SHOW_FORM:
             AppStore.showForm();
             AppStore.emit(CHANGE_EVENT);
-            break;
+        break;
+
+        case AppConstants.ADD_WORKOUT:
+            AppStore.addWorkout(action.workout);
+            // AppAPI.addWorkout(action.workout);
+            AppStore.emit(CHANGE_EVENT);
+        break;
 
     }
 
