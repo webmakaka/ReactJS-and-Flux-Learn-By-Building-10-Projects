@@ -19822,7 +19822,7 @@ var AddForm = React.createClass ({displayName: "AddForm",
 
 module.exports = AddForm;
 
-},{"../actions/AppActions":164,"../stores/AppStore":170,"react":163}],166:[function(require,module,exports){
+},{"../actions/AppActions":164,"../stores/AppStore":171,"react":163}],166:[function(require,module,exports){
 var React = require('react');
 var AppActions = require('../actions/AppActions');
 var AppStore = require('../stores/AppStore');
@@ -19891,7 +19891,7 @@ var App = React.createClass ({displayName: "App",
 
 module.exports = App;
 
-},{"../actions/AppActions":164,"../stores/AppStore":170,"./AddForm.js":165,"react":163}],167:[function(require,module,exports){
+},{"../actions/AppActions":164,"../stores/AppStore":171,"./AddForm.js":165,"react":163}],167:[function(require,module,exports){
 module.exports = {
     SHOW_FORM: 'SHOW_FORM',
     ADD_WORKOUT: 'ADD_WORKOUT'
@@ -19919,13 +19919,41 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var App = require('./components/App');
 var AppAPI = require('./utils/AppAPI.js');
+var StartData = require('./startData.js');
+
+if(localStorage.getItem('workouts') == null){
+    StartData.init();
+}
 
 ReactDOM.render(
     React.createElement(App, null),
     document.getElementById('app')
 );
 
-},{"./components/App":166,"./utils/AppAPI.js":171,"react":163,"react-dom":34}],170:[function(require,module,exports){
+},{"./components/App":166,"./startData.js":170,"./utils/AppAPI.js":172,"react":163,"react-dom":34}],170:[function(require,module,exports){
+module.exports = {
+    init: function(){
+        localStorage.clear();
+        localStorage.setItem('workouts', JSON.stringify([
+            {
+                id: 0001,
+                type: 'Jogging',
+                minutes: 20,
+                miles: 2,
+                date: new Date()
+            },
+            {
+                id: 0002,
+                type: 'Yoga',
+                minutes: 40,
+                miles: '',
+                date: new Date()
+            }
+        ]));
+    }
+};
+
+},{}],171:[function(require,module,exports){
 var AppDispatcher =  require('../dispatcher/AppDispatcher');
 var AppConstants = require('../constants/AppConstants');
 var EventEmitter = require('events').EventEmitter;
@@ -19985,7 +20013,7 @@ AppDispatcher.register(function(payload){
 
         case AppConstants.ADD_WORKOUT:
             AppStore.addWorkout(action.workout);
-            // AppAPI.addWorkout(action.workout);
+            AppAPI.addWorkout(action.workout);
             AppStore.emit(CHANGE_EVENT);
         break;
 
@@ -19997,11 +20025,24 @@ AppDispatcher.register(function(payload){
 
 module.exports = AppStore;
 
-},{"../constants/AppConstants":167,"../dispatcher/AppDispatcher":168,"../utils/AppAPI.js":171,"events":1,"object-assign":32}],171:[function(require,module,exports){
+},{"../constants/AppConstants":167,"../dispatcher/AppDispatcher":168,"../utils/AppAPI.js":172,"events":1,"object-assign":32}],172:[function(require,module,exports){
 var AppActions = require('../actions/AppActions');
 
 module.exports = {
 
-}
+    addWorkout: function(workout){
+
+        var workouts = JSON.parse(localStorage.getItem('workouts'));
+
+        workouts.push(workout);
+        localStorage.setItem('workouts', JSON.stringify(workouts));
+    },
+
+    getWorkouts: function(){
+        var workouts = JSON.parse(localStorage.getItem('workouts'));
+        AppActions.receiveWorkouts(workouts);
+    }
+
+};
 
 },{"../actions/AppActions":164}]},{},[169]);

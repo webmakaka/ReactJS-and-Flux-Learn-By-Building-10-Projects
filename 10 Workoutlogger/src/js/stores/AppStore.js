@@ -57,7 +57,7 @@ AppDispatcher.register(function(payload){
 
         case AppConstants.ADD_WORKOUT:
             AppStore.addWorkout(action.workout);
-            // AppAPI.addWorkout(action.workout);
+            AppAPI.addWorkout(action.workout);
             AppStore.emit(CHANGE_EVENT);
         break;
 

@@ -572,3 +572,5 @@ http://localhost:8080/app/
     $ gulp
 
 003 Add Workout Form
+
+004 Using LocalStorage
