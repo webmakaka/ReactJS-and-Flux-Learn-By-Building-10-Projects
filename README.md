@@ -575,3 +575,21 @@ http://localhost:8080/app/
 004 Using LocalStorage
 
 005 Fetch Display Workouts
+
+006 Deleting Workouts
+
+![project_10_pic_1.png](img/project_10_pic_1.png)
+
+![project_10_pic_2.png](img/project_10_pic_2.png)
+
+
+    $ npm list --depth=0
+    10_Workoutlogger@1.0.0 /projects/10 Workoutlogger
+    ├── browserify@13.1.0
+    ├── flux@2.1.1
+    ├── gulp@3.9.1
+    ├── object-assign@2.1.1
+    ├── react@0.14.8
+    ├── react-dom@0.14.8
+    ├── reactify@1.1.1
+    └── vinyl-source-stream@1.1.0

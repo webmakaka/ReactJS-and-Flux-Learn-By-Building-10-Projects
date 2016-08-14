@@ -19756,6 +19756,13 @@ var AppActions = {
             actionType: AppConstants.RECEIVE_WORKOUTS,
             workouts: workouts
         });
+    },
+
+    removeWorkout: function(workoutId){
+        AppDispatcher.handleViewAction({
+            actionType: AppConstants.REMOVE_WORKOUT,
+            workoutId: workoutId
+        });
     }
 };
 
@@ -19917,10 +19924,14 @@ var Workout = React.createClass ({displayName: "Workout",
 
         return(
             React.createElement("li", {className: "list-group-item"}, 
-                this.props.workout.type, " - ", this.props.workout.minutes, " Minutes ", miles
+                this.props.workout.type, " - ", this.props.workout.minutes, " Minutes ", miles, " ", React.createElement("a", {href: "#", onClick: this.onDelete.bind(this, this.props.workout.id), className: "delete"}, "X")
             )
         );
     },
+
+    onDelete: function(i, j){
+        AppActions.removeWorkout(i);
+    }
 
 });
 
@@ -19959,7 +19970,8 @@ module.exports = Workouts;
 module.exports = {
     SHOW_FORM: 'SHOW_FORM',
     ADD_WORKOUT: 'ADD_WORKOUT',
-    RECEIVE_WORKOUTS: 'RECEIVE_WORKOUTS'
+    RECEIVE_WORKOUTS: 'RECEIVE_WORKOUTS',
+    REMOVE_WORKOUT: 'REMOVE_WORKOUT'
 };
 
 },{}],170:[function(require,module,exports){
@@ -20064,6 +20076,11 @@ var AppStore = assign({}, EventEmitter.prototype, {
         _workouts = workouts
     },
 
+    removeWorkouts: function(workoutId){
+        var index = _workouts.findIndex(x => x.id === workoutId);
+        _workouts.splice(index, 1);
+    },
+
     addChangeListener: function(callback){
         this.on('change', callback);
     },
@@ -20093,6 +20110,12 @@ AppDispatcher.register(function(payload){
             AppStore.emit(CHANGE_EVENT);
         break;
 
+        case AppConstants.REMOVE_WORKOUT:
+            AppStore.removeWorkouts(action.workoutId);
+            AppAPI.removeWorkout(action.workoutId);
+            AppStore.emit(CHANGE_EVENT);
+        break;
+
     }
 
     return true;
@@ -20117,6 +20140,17 @@ module.exports = {
     getWorkouts: function(){
         var workouts = JSON.parse(localStorage.getItem('workouts'));
         AppActions.receiveWorkouts(workouts);
+    },
+
+    removeWorkout: function(workoutId){
+        var workouts = JSON.parse(localStorage.getItem('workouts'));
+
+        for(var i = 0; i < workouts.length; i++){
+            if(workouts[i].id == workoutId){
+                workouts.splice(i, 1);
+            }
+        }
+        localStorage.setItem('workouts', JSON.stringify(workouts));
     }
 
 };
