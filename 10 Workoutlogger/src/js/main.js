@@ -8,6 +8,8 @@ if(localStorage.getItem('workouts') == null){
     StartData.init();
 }
 
+AppAPI.getWorkouts();
+
 ReactDOM.render(
     <App />,
     document.getElementById('app')

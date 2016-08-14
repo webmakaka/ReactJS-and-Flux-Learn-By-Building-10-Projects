@@ -561,7 +561,6 @@ http://localhost:8080/app/
     └── webpack@1.12.15
 
 
-
 <br/>
 
 ### 10 Workoutlogger
@@ -574,3 +573,5 @@ http://localhost:8080/app/
 003 Add Workout Form
 
 004 Using LocalStorage
+
+005 Fetch Display Workouts
